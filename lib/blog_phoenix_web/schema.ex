@@ -13,4 +13,13 @@ defmodule BlogPhoenixWeb.Schema do
       resolve(&Resolvers.Content.list_posts/3)
     end
   end
+
+  mutation do
+    @desc "Signup"
+    field :signup, :user do
+      arg(:input, non_null(:signup_input))
+
+      resolve(&Resolvers.Account.signup/3)
+    end
+  end
 end
