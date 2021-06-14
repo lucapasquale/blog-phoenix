@@ -5,8 +5,8 @@ defmodule BlogPhoenix.Accounts.User do
   alias BlogPhoenix.Content
 
   schema "users" do
-    field :password_hash, :string
-    field :username, :string
+    field :password_hash, :string, null: false
+    field :username, :string, null: false
 
     has_many :post, Content.Post
 

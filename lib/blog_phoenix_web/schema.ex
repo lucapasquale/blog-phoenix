@@ -1,5 +1,8 @@
 defmodule BlogPhoenixWeb.Schema do
   use Absinthe.Schema
+  import_types(Absinthe.Type.Custom)
+
+  import_types(BlogPhoenixWeb.Schema.AccountTypes)
   import_types(BlogPhoenixWeb.Schema.ContentTypes)
 
   alias BlogPhoenixWeb.Resolvers
